@@ -2,6 +2,7 @@ package com.qa.oop;
 import com.qa.oop.employment.Employee;
 import com.qa.oop.employment.Trainee;
 import com.qa.oop.vehicle.Car;
+import com.qa.oop.vehicle.Garage;
 import com.qa.oop.vehicle.Vehicle;
 
 public class MainRunner {
@@ -26,9 +27,16 @@ public class MainRunner {
 			Vehicle one = new Vehicle("Toyota", "Camry", 4, "Gas");
 			//String make, String model, int wheels, String fuel, int doors, String style
 			Car a = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
-			System.out.println(a);
-			System.out.println(one);
-			
+			Car b = new Car("Honda", "Civic", 4, "Gas", 2, "Coupe");
+//			Car c = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
+//			Car d = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
+//			System.out.println(a);
+//			System.out.println(one);
+			//String make, String model, int wheels, String fuel, int maxVehicles
+			Garage container = new Garage(a.getMake(), a.getModel(), a.getDoors(), a.getFuel());
+			container.addVehicle(a);
+			container.addVehicle(b);
+			System.out.println(container.displayVehicles());
 			
 			
 			running = false;
