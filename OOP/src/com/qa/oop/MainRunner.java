@@ -1,8 +1,10 @@
 package com.qa.oop;
 import com.qa.oop.employment.Employee;
 import com.qa.oop.employment.Trainee;
+import com.qa.oop.vehicle.Abilities;
 import com.qa.oop.vehicle.Car;
 import com.qa.oop.vehicle.Garage;
+import com.qa.oop.vehicle.Motorcycle;
 import com.qa.oop.vehicle.Vehicle;
 
 public class MainRunner {
@@ -26,16 +28,20 @@ public class MainRunner {
 			//String make, String model,int wheels, String fuel
 			Vehicle one = new Vehicle("Toyota", "Camry", 4, "Gas");
 			//String make, String model, int wheels, String fuel, int doors, String style
-			Car a = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
-			Car b = new Car("Honda", "Civic", 4, "Gas", 2, "Coupe");
+			Abilities a = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
+			Abilities b = new Car("Honda", "Civic", 4, "Gas", 2, "Coupe");
+			//String make, String model,int wheels, String fuel, boolean hasHelmet
+			Abilities c = new Motorcycle("Kawasaki", "Ninja", 2, "Gas", true);
 //			Car c = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
 //			Car d = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
 //			System.out.println(a);
 //			System.out.println(one);
 			//String make, String model, int wheels, String fuel, int maxVehicles
-			Garage container = new Garage(a.getMake(), a.getModel(), a.getDoors(), a.getFuel());
+			Garage container = new Garage();
 			container.addVehicle(a);
 			container.addVehicle(b);
+			container.addVehicle(c);
+			b.travel();
 			System.out.println(container.displayVehicles());
 			
 			
