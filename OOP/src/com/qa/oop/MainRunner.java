@@ -41,7 +41,9 @@ public class MainRunner {
 			container.addVehicle(a);
 			container.addVehicle(b);
 			container.addVehicle(c);
-			b.travel();
+//			container.removeByMake("Honda");
+//			container.removeByIndex();
+//			System.out.print(container.calculateBill());
 			System.out.println(container.displayVehicles());
 			
 			
