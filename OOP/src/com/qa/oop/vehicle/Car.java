@@ -29,9 +29,11 @@ public class Car extends Vehicle{
 
 	@Override
 	public String toString() {
-		return "Car [doors=" + doors + ", style=" + style + ", make=" + getMake() + ", model=" + getModel()
-				+ ", wheels=" + getWheels() + ", fuel=" + getFuel() + "]";
+		return "Car [doors=" + doors + ", style=" + style + ", getId()=" + getId() + ", getMake()=" + getMake()
+				+ ", getModel()=" + getModel() + ", getWheels()=" + getWheels() + ", getFuel()=" + getFuel() + "]";
 	}
+
+	
 
 	
 

@@ -49,8 +49,18 @@ public class Garage{
 			}
 		}
 	}
-	public static void removeByIndex(int i) {
-		allVehicles.remove(i);
+	public static String removeById(int id) {
+		for(int i = 0; i < allVehicles.size(); i++) {
+			if(allVehicles.get(i).getId() == id) {
+				allVehicles.remove(i);
+				return "ID: "+ id + " was removed";
+			}
+		}
+		return "Vehicle with id: " + id + " not found";
+	}
+	
+	public static void removeAll() {
+		allVehicles.clear();
 		
 	}
 

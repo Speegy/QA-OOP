@@ -2,6 +2,8 @@ package com.qa.oop.vehicle;
 
 public class Vehicle implements Abilities{
 	
+	private static int count = 0;
+	private int id;
 	private String make;
 	private String model;
 	private int wheels;
@@ -12,6 +14,11 @@ public class Vehicle implements Abilities{
 		this.model = model;
 		this.wheels = wheels;
 		this.fuel = fuel;
+		this.id = ++count;
+	}
+	
+	public int getId() {
+		return id;
 	}
 
 	public String getMake() {
@@ -48,15 +55,14 @@ public class Vehicle implements Abilities{
 
 	@Override
 	public void travel() {
+		System.out.println("Vehicle Travel");
 		
-		
-	}
-	
-	@Override
-	public String toString() {
-		return "Vehicle [make=" + make + ", model=" + model + ", wheels=" + wheels +  ", fuel=" + fuel + "]";
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Vehicle [id=" + id + ", make=" + make + ", model=" + model + ", wheels=" + wheels + ", fuel=" + fuel
+				+ "]";
+	}
 	
 }

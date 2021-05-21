@@ -17,10 +17,17 @@ public class Motorcycle extends Vehicle{
 		this.hasHelmet = hasHelmet;
 	}
 
+
+	@Override
+	public void travel() {
+		System.out.println("I am off roading");
+	}
+
 	@Override
 	public String toString() {
-		return "Motorcycle [hasHelmet=" + hasHelmet + ", make=" + getMake() + ", model=" + getModel()
-				+ ", wheels=" + getWheels() + ", fuel=" + getFuel() + "]";
-	}	
-	
+		return "Motorcycle [hasHelmet=" + hasHelmet + ", getId()=" + getId() + ", getMake()=" + getMake()
+				+ ", getModel()=" + getModel() + ", getWheels()=" + getWheels() + ", getFuel()=" + getFuel() + "]";
+	}
+
+
 }

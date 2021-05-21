@@ -38,11 +38,15 @@ public class MainRunner {
 //			System.out.println(one);
 			//String make, String model, int wheels, String fuel, int maxVehicles
 			Garage container = new Garage();
+			container.addVehicle(one);
 			container.addVehicle(a);
 			container.addVehicle(b);
 			container.addVehicle(c);
+//			a.getId();
+//			c.travel();
 //			container.removeByMake("Honda");
-//			container.removeByIndex();
+			System.out.println(container.removeById(5));
+//			container.removeAll();
 //			System.out.print(container.calculateBill());
 			System.out.println(container.displayVehicles());
 			
