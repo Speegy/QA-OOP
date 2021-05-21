@@ -5,6 +5,12 @@ public class Car extends Vehicle{
 	private int doors;
 	private String style;
 	
+//	public Car(String make, String model, int wheels, int doors, String style) {
+//		super(make, model);
+//		this.doors = doors;
+//		this.style = style;
+//	}
+	
 	public Car(String make, String model, int wheels, String fuel, int doors, String style) {
 		super(make, model, wheels, fuel);
 		this.doors = doors;

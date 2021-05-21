@@ -5,6 +5,7 @@ import com.qa.oop.vehicle.Abilities;
 import com.qa.oop.vehicle.Car;
 import com.qa.oop.vehicle.Garage;
 import com.qa.oop.vehicle.Motorcycle;
+import com.qa.oop.vehicle.Plane;
 import com.qa.oop.vehicle.Vehicle;
 
 public class MainRunner {
@@ -30,8 +31,10 @@ public class MainRunner {
 			//String make, String model, int wheels, String fuel, int doors, String style
 			Abilities a = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
 			Abilities b = new Car("Honda", "Civic", 4, "Gas", 2, "Coupe");
+//			Abilities b2 = new Motorcycle("Bike", "BikeModel", true);
 			//String make, String model,int wheels, String fuel, boolean hasHelmet
 			Abilities c = new Motorcycle("Kawasaki", "Ninja", 2, "Gas", true);
+			Abilities d = new Plane("Plane", "model", 6, "Gas", true);
 //			Car c = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
 //			Car d = new Car(one.getMake(), one.getModel(), one.getWheels(), one.getFuel(), 4, "Sedan");
 //			System.out.println(a);
@@ -41,11 +44,14 @@ public class MainRunner {
 			container.addVehicle(one);
 			container.addVehicle(a);
 			container.addVehicle(b);
+//			container.addVehicle(b2);
 			container.addVehicle(c);
+			container.addVehicle(d);
+//			d.travel();
 //			a.getId();
 //			c.travel();
 //			container.removeByMake("Honda");
-			System.out.println(container.removeById(5));
+//			System.out.println(container.removeById(5));
 //			container.removeAll();
 //			System.out.print(container.calculateBill());
 			System.out.println(container.displayVehicles());

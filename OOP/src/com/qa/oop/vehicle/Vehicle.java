@@ -9,6 +9,10 @@ public class Vehicle implements Abilities{
 	private int wheels;
 	private String fuel;
 	
+//	public Vehicle(String make, String model) {
+//		this(make, model, 2, "Gas");
+//	}
+	
 	public Vehicle(String make, String model,int wheels, String fuel) {
 		this.make = make;
 		this.model = model;

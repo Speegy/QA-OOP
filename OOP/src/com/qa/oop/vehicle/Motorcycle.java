@@ -4,6 +4,11 @@ public class Motorcycle extends Vehicle{
 	
 	private boolean hasHelmet;
 	
+//	public Motorcycle(String make, String model, boolean hasHelmet) {
+//		super(make, model);
+//		this.hasHelmet = hasHelmet;
+//	}
+	
 	public Motorcycle(String make, String model, int wheels, String fuel, boolean hasHelmet) {
 		super(make, model, wheels, fuel);
 		this.hasHelmet = hasHelmet;

@@ -67,6 +67,11 @@ public class Garage{
 	public List displayVehicles() {
 		return allVehicles;
 	}
+
+	@Override
+	public String toString() {
+		return "Garage [maxVehicles=" + maxVehicles + "]";
+	}
 	
 	
 }
